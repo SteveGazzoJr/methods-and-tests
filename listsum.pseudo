@@ -1,0 +1,33 @@
+listsum.pseudo
+
+Write three functions that compute the sum of the numbers in a given list using a for-loop, a while-loop, and recursion.
+
+forSum(array[])
+	
+	int count
+	int sum = 0
+	for (count=0, count<array.length(), count++) //may need adjusting for fencepost errors
+		sum+=array[count]
+	next
+	
+	return sum
+	
+whileSum(array[])
+
+	int count = 0
+	int sum = 0
+	 while count<array.length //may need adjusting for fencepost errors
+		sum+=array[count]
+		count++
+	next
+	
+	return sum
+	
+recurSum(array[], sum, count)//initial call assumes sum=0 && count=0
+	if count<array.length //fencepost!
+		sum += array[count]
+		count++
+		recurSum(array,sum,count)
+	end if
+	
+	return sum
