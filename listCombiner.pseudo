@@ -1,0 +1,29 @@
+listCombiner.pseudo
+
+Problem 2
+
+Write a function that combines two lists by alternatingly taking elements. For example: given the two lists [a, b, c] and [1, 2, 3], the function should return [a, 1, b, 2, c, 3].
+
+
+//problem does not say whether to assume lists of equal length
+//if lists are of unequal length, once at end of shorter list
+//I chose to append the rest of longer list in order
+listCombiner(list1, list2)
+	list listOut
+	
+	int count
+	int loopCounter=0
+	
+	if list1.length >= list2.length count = list1.length
+	else count = list2.length
+	
+	while loopCounter <= count
+		if count <= list1.length
+			listOut.add(list1[count]
+		end if
+		if count <= list2.length
+			listOut.add(list2[count])
+		end if
+	end while
+	
+return listOut

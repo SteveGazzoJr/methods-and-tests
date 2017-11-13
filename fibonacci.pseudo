@@ -1,0 +1,15 @@
+fibonacci.pseduo
+
+compute fibonacci sequence to 100 digits
+recursive cuz I'm all fancy and it's just a better way to do it
+
+fibonacci(int1, int2, count)//assumes initial call of 0,1,0
+
+	int total
+	count++
+	while count <100
+		total = int1 + int2
+		fibonacci(int2,total,count)
+	end while
+	
+	return total
